@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.slidingpanelayout.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The first child view becomes the left pane. When the combined
+    desired width (expressed using android:layout_width) would
+    not fit on-screen at once, the right pane is permitted to
+    overlap the left. -->
+    <LinearLayout
+        android:id="@+id/side_pane_content"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Side Pane"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/side_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@android:color/white"
+            android:text="OPEN DETAIL VIEW"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/side_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@android:color/white"
+            android:text="CLOSE DETAIL VIEW"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- The second child becomes the right (content) pane. In this
+    example, android:layout_weight is used to expand this detail pane
+    to consume leftover available space when the entire window is wide enough to fit both the left and right pane.-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/detail_container"
+        android:name="com.cesarvaliente.slidingpanelayout_sample.ContentSidePaneFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@android:color/holo_red_dark" />
+
+
+</androidx.slidingpanelayout.widget.SlidingPaneLayout>
