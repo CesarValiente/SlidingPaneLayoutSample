@@ -2,14 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright">
+    android:background="@android:color/holo_green_light"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:text="Content Pane"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/side_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@android:color/white"
+        android:text="CLOSE"
+        android:textColor="@android:color/black" />
 
 </LinearLayout>

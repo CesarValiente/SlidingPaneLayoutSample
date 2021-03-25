@@ -10,7 +10,8 @@
     overlap the left. -->
     <LinearLayout
         android:id="@+id/side_pane_content"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@android:color/holo_orange_dark"
@@ -40,7 +41,8 @@
             android:layout_margin="20dp"
             android:backgroundTint="@android:color/white"
             android:text="CLOSE DETAIL VIEW"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <!-- The second child becomes the right (content) pane. In this
