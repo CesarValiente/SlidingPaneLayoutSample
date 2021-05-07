@@ -11,9 +11,9 @@
     <LinearLayout
         android:id="@+id/side_pane_content"
         android:layout_width="400dp"
-        android:layout_weight="1"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:layout_weight="1"
         android:background="@android:color/holo_orange_dark"
         android:orientation="vertical">
 
@@ -31,18 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:backgroundTint="@android:color/white"
-            android:text="OPEN DETAIL VIEW"
+            android:text="OPEN CONTENT PANE"
             android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/side_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:backgroundTint="@android:color/white"
-            android:text="CLOSE DETAIL VIEW"
-            android:textColor="@android:color/black"
-            android:visibility="gone"/>
     </LinearLayout>
 
     <!-- The second child becomes the right (content) pane. In this
@@ -50,7 +40,7 @@
     to consume leftover available space when the entire window is wide enough to fit both the left and right pane.-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/detail_container"
-        android:name="com.cesarvaliente.slidingpanelayout_sample.ContentSidePaneFragment"
+        android:name="com.cesarvaliente.slidingpanelayout_sample.ContentPaneFragment"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="2"
