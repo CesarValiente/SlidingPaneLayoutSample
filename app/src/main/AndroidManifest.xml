@@ -2,12 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cesarvaliente.slidingpanelayout_sample">
 
+    <!-- android:configChanges is not needed when using SlidingPaneLayout, we have added it here to show as well
+    how isSlideable() changes with every new configuration change -->
     <application
         android:allowBackup="true"
+        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.SlidingPaneLayoutSample">
         <activity android:name=".MainActivity">
             <intent-filter>
