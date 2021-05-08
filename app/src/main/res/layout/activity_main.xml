@@ -13,7 +13,6 @@
         android:layout_width="400dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:layout_weight="1"
         android:background="@android:color/holo_orange_dark"
         android:orientation="vertical">
 
@@ -43,7 +42,7 @@
         android:name="com.cesarvaliente.slidingpanelayout_sample.ContentPaneFragment"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:background="@android:color/holo_red_dark" />
 
 
