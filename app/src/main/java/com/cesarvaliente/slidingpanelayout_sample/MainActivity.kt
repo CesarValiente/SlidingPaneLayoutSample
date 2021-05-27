@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         open.setOnClickListener { slidingPane.open() }
 
         slidingText = findViewById<TextView>(R.id.sliding_text)
-        //
+
         val sidePane = findViewById<LinearLayout>(R.id.side_pane_content)
         val slider = findViewById<Slider>(R.id.width_slider)
         slider.addOnChangeListener { slider, value, _ ->
-            Log.i(TAG, "new width: " + value)
+            Log.i(TAG, "new width: $value")
 
             val params: ViewGroup.LayoutParams? = sidePane.layoutParams
             params?.width = (value * this.resources.displayMetrics.density).toInt()
