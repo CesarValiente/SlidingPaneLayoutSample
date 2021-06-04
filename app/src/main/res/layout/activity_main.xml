@@ -32,6 +32,24 @@
             android:backgroundTint="@android:color/white"
             android:text="OPEN CONTENT PANE"
             android:textColor="@android:color/black" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/width_slider"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:value="400"
+            android:stepSize="5"
+            android:valueTo="800" />
+
+        <TextView
+            android:id="@+id/sliding_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Slideable?"
+            android:textSize="20sp"
+            />
     </LinearLayout>
 
     <!-- The second child becomes the right (content) pane. In this
